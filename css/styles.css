@@ -138,6 +138,7 @@ h3 {
   display: flex;
   align-items: center;
   color: var(--primary-text-color);
+  fill: var(--primary-text-color);
 }
 
 .site-nav .link:hover,
@@ -147,6 +148,10 @@ h3 {
 
 .site-nav .link.current {
   color: var(--accent-color);
+}
+
+.header-icon {
+  margin-right: 10px;
 }
 
 .header-contacts .link:hover,
@@ -167,10 +172,6 @@ h3 {
 
 .header-contacts .item + .item {
   margin-left: 50px;
-}
-
-.header-icon {
-  margin-right: 10px;
 }
 
 .section-title {
@@ -364,17 +365,22 @@ h3 {
 /*Клиенты */
 .clients-list {
   display: flex;
-  justify-content: space-between;
+  margin-left: calc(-1 * var(--card-set-gap));
+}
+
+.clients-list .item {
+  flex-basis: calc(100% / 6 - var(--card-set-gap));
+  margin-left: var(--card-set-gap);
 }
 
 .clients-list .client-link {
   display: inline-flex;
   justify-content: center;
+  align-items: center;
   width: 170px;
   height: 90px;
   border: 1px solid var(--base-icon-color);
   border-radius: 4px;
-  padding: 20px;
   fill: var(--base-icon-color);
 }
 
@@ -501,12 +507,14 @@ h3 {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 20px;
+  margin-top: 0px;
 
   color: var(--primary-bgc);
 }
 
 .flexbox {
   display: flex;
+  align-items: baseline;
 }
 
 .content-box:not(:last-child) {
@@ -524,11 +532,12 @@ h3 {
 }
 
 .networks-list .network-link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  padding: 12px;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
